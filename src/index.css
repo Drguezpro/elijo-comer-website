@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+  @font-face {
+    font-family: 'LoveloLine';
+    src: url('./assets/fonts/Lovelo_Line_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    --font-lovelo: 'LoveloLine', sans-serif;
+  }
+}
+
+.bg-marca-agua {
+  background-image: url("./assets/FondoMarcaDeAgua_2.png");
+  background-repeat: no-repeat;       /* ↔ Quita el repeat */
+  background-position: center center; /* ↔ Centra la imagen */
+  background-size: cover;           /* ↔ Escala la imagen para que quepa */
+}
