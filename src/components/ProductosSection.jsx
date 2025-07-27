@@ -25,7 +25,7 @@ const rubros = [
   },
 ]
 
-export default function ProductosSection() {
+export default function ProductosSection({ onVerMas }) {
   return (
     <section className="w-full bg-gray-950 bg-marca-agua bg-cover bg-center bg-fixed text-white py-16 px-6">
       
@@ -41,7 +41,7 @@ export default function ProductosSection() {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {rubros.map((rubro) => (
-          <RubroCard key={rubro.nombre} rubro={rubro} />
+          <RubroCard key={rubro.nombre} rubro={rubro} onVerMas={() => onVerMas(rubro.nombre)}/>
         ))}
       </div>
     </section>

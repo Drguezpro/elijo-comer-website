@@ -30,16 +30,16 @@ export default function Navbar() {
         <li><Link to="/" className="hover:text-yellow-300">Inicio</Link></li>
         <li><Link to="/productos" className="hover:text-yellow-300">Productos</Link></li>
         <li><Link to="/quienes-somos" className="hover:text-yellow-300">Quiénes Somos</Link></li>
-        <li><Link to="/franquicias" className="hover:text-yellow-300">Franquicias</Link></li>
+        <li><Link to="/cin" className="hover:text-yellow-300">Cin con "C"</Link></li>
         <li><Link to="/contacto" className="hover:text-yellow-300">Contacto</Link></li>
       </ul>
 
       <Link
-        to="/asociate"
-        className="text-white px-4 py-2 rounded hover:bg-red-700 transition"
+        to="/franquicias"
+        className="text-white px-4 py-2 rounded hover:bg-red-700 transition mr-4"
         style={{ backgroundColor: '#ce0008' }}
       >
-        Asociate
+        Franquicias
       </Link>
     </nav>
   )
