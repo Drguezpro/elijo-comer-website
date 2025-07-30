@@ -47,7 +47,7 @@ const productosData = {
     },
 
     {
-      img: ChikenBurgerDsk,
+      img: HambSimpleDsk,
       name: "CIN CULPA MEAT",
       desc: "Pan de papa, doble medallón de carne, 2 fetas de Cheddar, Portobellos asados, cebolla caramelizada y Cheddar fundido."
     },
@@ -59,7 +59,7 @@ const productosData = {
     },
     {
       img: HambCuadrupleDsk,
-      name: "LA CUADRUPLE",
+      name: "CUADRUPLE",
       desc: "Pan de papa, cuádruple medallón de carne, 4 fetas de Cheddar y 4 fetas de bacon crocante."
     },
     {

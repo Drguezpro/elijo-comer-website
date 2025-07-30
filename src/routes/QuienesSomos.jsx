@@ -23,11 +23,11 @@ export default function QuienesSomos() {
             ELIJO COMER{" "}
           </span>
           <span style={{ textTransform: 'lowercase', fontWeight: 'normal' }}>
-            tenemos...
+            somos...
           </span>
         </h1>
         <p className="text-xl lg:text-3xl text-gray-200">
-          Pasión por el sabor, compromiso con la calidad y ganas de crecer juntos.
+          Apasionados por el sabor, tenemos compromiso con la calidad y ganas de crecer juntos.
         </p>
       </div>
 

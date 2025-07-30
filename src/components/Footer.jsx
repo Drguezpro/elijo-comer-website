@@ -12,6 +12,7 @@ export default function Footer() {
           <div>© {currentYear} Elijo Comer</div>
           <div className="mt-1 text-xs text-gray-500">
             Sitio desarrollado por{' '}
+            {/* 
             <a
               href="https://paginasweb.restaurant"
               target="_blank"
@@ -19,8 +20,11 @@ export default function Footer() {
               className="underline hover:text-white"
             >
               paginasweb.restaurant
-            </a>
+            </a> 
+            */}
+            @parsel.studio
           </div>
+
         </div>
 
         {/* Centro: Dirección y horario */}

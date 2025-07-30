@@ -6,10 +6,10 @@ import logo from '../assets/LogoElijoComerBis.png'
 
 export default function ProcesoVideo() {
   const frases = [
-    'Pan casero, recién horneado',
+    'Pan de papa, suave y esponjoso',
     'Carne jugosa al punto justo',
-    'Queso fundido, sabor auténtico',
-    'Amor por lo artesanal' // última frase, se reemplaza por el logo
+    'Queso fundido, bacon crujiente, sabor auténtico',
+    'Amor por lo artesanal' 
   ]
 
   const [idx, setIdx] = useState(0)
