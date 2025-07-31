@@ -49,13 +49,13 @@ export default function DetalleRubro({ rubro, onBack }) {
 
 {/* Botón Volver */}
       <div className="flex justify-end">
-  <button
-    onClick={onBack}
-    className="bg-[#f4b702] text-black px-4 py-2 rounded hover:bg-yellow-400 transition cursor-pointer mr-20"
-  >
-    ← Volver
-  </button>
-</div>
+        <button
+          onClick={onBack}
+          className="bg-[#f4b702] text-black px-4 py-2 rounded hover:bg-yellow-400 transition cursor-pointer mr-20"
+        >
+          ← Volver
+        </button>
+      </div>
 
 
     </section>

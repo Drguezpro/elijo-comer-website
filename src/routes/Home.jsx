@@ -7,6 +7,8 @@ import 'swiper/css/effect-fade'
 
 import portada1 from '../assets/ElijoComerPortada_1.png'
 import portada2 from '../assets/ElijoComerPortada_2.png'
+import portadaMobile1 from '../assets/PortadaElijoComerMbl1.png'
+import portadaMobile2 from '../assets/PortadaElijoComerMbl2.png'
 import ProductosSection from '../components/ProductosSection'
 import DetalleRubro from '../components/DetalleRubro'
 import ProcesoVideo from '../components/ProcesoVideo'
@@ -21,6 +23,11 @@ export default function Home() {
     }
   }, [])
 
+  const slides = [
+    { desktop: portada1, mobile: portadaMobile1 },
+    { desktop: portada2, mobile: portadaMobile2 }
+  ]
+
   return (
     <div className="w-screen">
       {detalle === null ? (
@@ -32,17 +39,26 @@ export default function Home() {
             spaceBetween={0}
             slidesPerView={1}
             loop
-            autoplay={{ delay: 6000, disableOnInteraction: false }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             className="h-screen"
           >
-            {[portada1, portada2].map((src, idx) => (
+            {slides.map((slide, idx) => (
               <SwiperSlide key={idx}>
-                <img
-                  src={src}
-                  alt={`Portada ${idx + 1}`}
-                  className="object-cover w-full h-full"
-                />
+                <div className="w-full h-full relative">
+                  {/* versión mobile */}
+                  <img
+                    src={slide.mobile}
+                    alt={`Portada móvil ${idx + 1}`}
+                    className="block md:hidden object-cover w-full h-full"
+                  />
+                  {/* versión desktop */}
+                  <img
+                    src={slide.desktop}
+                    alt={`Portada ${idx + 1}`}
+                    className="hidden md:block object-cover w-full h-full"
+                  />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

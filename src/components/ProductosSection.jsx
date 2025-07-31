@@ -11,17 +11,17 @@ const rubros = [
   {
     nombre: 'Burgers',
     imagen: imgBurger,
-    descripcion: 'Las más sabrosas y artesanales hamburguesas.',
+    descripcion: 'Clásicas reinventadas: sabor casero con toque gourmet',
   },
   {
    nombre: 'Tenders',
   imagen: imgChiken,
-  descripcion: 'Crujientes por fuera, tiernos por dentro. 100% pechuga.'
+  descripcion: 'Crujientes por fuera, tiernos por dentro. 100% pechuga'
   },
   {
     nombre: 'Wraps',
     imagen: imgWrap,
-    descripcion: 'Frescos, completos y sin culpa.',
+    descripcion: 'Tu opción saludable y sorprendentemente rica',
   },
 ]
 
