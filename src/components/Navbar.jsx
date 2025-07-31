@@ -1,17 +1,35 @@
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import logo from '../assets/LogoElijoComerBlack.png'
+import logo from '../assets/LogoElijoComerBlack.webp'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+
+  // Ocultar el navbar en mobile en estas rutas
+  const hideNavbarOnMobileRoutes = [
+    '/quienes-somos',
+    '/franquicias',
+    '/contacto',
+    '/cin',
+    '/productos'
+  ]
+  const shouldHideNavbarMobile = hideNavbarOnMobileRoutes.includes(location.pathname)
+
+  // Cerrar el menú hamburguesa al cambiar de ruta
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location.pathname])
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-black text-yellow-400 flex items-center justify-between px-6 py-3 z-50">
+    <nav
+      className={`fixed top-0 left-0 right-0 bg-black text-yellow-400 flex items-center justify-between px-6 py-3 z-50 ${
+        shouldHideNavbarMobile ? 'hidden md:flex' : ''
+      }`}
+    >
       {/* Logo y título */}
-      <div className={`flex items-center ${
-           isOpen ? 'flex-col items-start' : ''
-         }`}>
+      <div className={`flex items-center ${isOpen ? 'flex-col items-start' : ''}`}>
         <Link to="/">
           <img src={logo} alt="Logo Elijo Comer" className="h-20" />
         </Link>

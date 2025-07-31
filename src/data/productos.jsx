@@ -1,26 +1,26 @@
 // src/data/productos.js
 
 // Burgers
-import ChikenBurgerDsk from "../assets/productos/burgers/ChikenBurger.png";
-import ChikenBurgerCheddarDsk from "../assets/productos/burgers/ChikenBurgerCheddarDsk.png";
-import ClasicaDsk from "../assets/productos/burgers/ClasicaDsk.png";
-import HamburDobleCheddarDsk from "../assets/productos/burgers/HamburDobleCheddarDsk.png";
-import HamburSimpleCheddarDsk from "../assets/productos/burgers/HamburSimpleCheddarDsk.png";
-import HamburTripleCheddarDsk from "../assets/productos/burgers/HamburTripleCheddarDsk.png";
-import HambCuadrupleDsk from "../assets/productos/burgers/HambCuadrupleDsk.png";
-import HambSimpleDsk from "../assets/productos/burgers/HambSimpleDsk.png";
-import HambTripleDsk from "../assets/productos/burgers/HambTripleDsk.png";
+import ChikenBurgerDsk from "../assets/productos/burgers/ChikenBurger.webp";
+import ChikenBurgerCheddarDsk from "../assets/productos/burgers/ChikenBurgerCheddarDsk.webp";
+import ClasicaDsk from "../assets/productos/burgers/ClasicaDsk.webp";
+import HamburDobleCheddarDsk from "../assets/productos/burgers/HamburDobleCheddarDsk.webp";
+import HamburSimpleCheddarDsk from "../assets/productos/burgers/HamburSimpleCheddarDsk.webp";
+import HamburTripleCheddarDsk from "../assets/productos/burgers/HamburTripleCheddarDsk.webp";
+import HambCuadrupleDsk from "../assets/productos/burgers/HambCuadrupleDsk.webp";
+import HambSimpleDsk from "../assets/productos/burgers/HambSimpleDsk.webp";
+import HambTripleDsk from "../assets/productos/burgers/HambTripleDsk.webp";
 
 // Tenders (Chicken)
-import ChikenDsk from "../assets/productos/chiken/ChikenDsk.png";
-import ChikenDsk2 from "../assets/productos/chiken/ChikenDsk2.png";
-import ChikenDsk3 from "../assets/productos/chiken/ChikenDsk3.png";
+import ChikenDsk from "../assets/productos/chiken/ChikenDsk.webp";
+import ChikenDsk2 from "../assets/productos/chiken/ChikenDsk2.webp";
+import ChikenDsk3 from "../assets/productos/chiken/ChikenDsk3.webp";
 
 // Wraps
-import WrappDsk from "../assets/productos/wraps/WrappDsk.png";
-import WrappDsk2 from "../assets/productos/wraps/WrappDsk2.png";
-import WrappDsk3 from "../assets/productos/wraps/WrappDsk3.png";
-import WrappDsk4 from "../assets/productos/wraps/WrappDsk4.png";
+import WrappDsk from "../assets/productos/wraps/WrappDsk.webp";
+import WrappDsk2 from "../assets/productos/wraps/WrappDsk2.webp";
+import WrappDsk3 from "../assets/productos/wraps/WrappDsk3.webp";
+import WrappDsk4 from "../assets/productos/wraps/WrappDsk4.webp";
 
 const productosData = {
   Burgers: [

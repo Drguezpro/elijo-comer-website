@@ -17,7 +17,7 @@
 }
 
 .bg-marca-agua {
-  background-image: url("./assets/FondoMarcaDeAgua_2.png");
+  background-image: url("./assets/FondoMarcaDeAgua_2.webp");
   background-repeat: no-repeat;       /* ↔ Quita el repeat */
   background-position: center center; /* ↔ Centra la imagen */
   background-size: cover;           /* ↔ Escala la imagen para que quepa */
@@ -36,4 +36,10 @@
 
 .animate-fade-in {
   animation: fade-in 1.5s ease-out forwards;
+}
+
+@media (max-width: 640px) {
+  .hide-navbar-mobile {
+    display: none !important;
+  }
 }

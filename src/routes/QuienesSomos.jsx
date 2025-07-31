@@ -1,8 +1,9 @@
 import React from 'react'
-import QSomosImg from '../assets/QSomosElijoComer.png'
-import MisionIcon from '../assets/IconQuienesSomos/Misión.png'
-import VisionIcon from '../assets/IconQuienesSomos/Visión.png'
-import ValoresIcon from '../assets/IconQuienesSomos/Valores.png'
+import { useNavigate } from 'react-router-dom';
+import QSomosImg from '../assets/QSomosElijoComer.webp'
+import MisionIcon from '../assets/IconQuienesSomos/Misión.webp'
+import VisionIcon from '../assets/IconQuienesSomos/Visión.webp'
+import ValoresIcon from '../assets/IconQuienesSomos/Valores.webp'
 
 const iconMap = {
   Misión: MisionIcon,
@@ -10,7 +11,12 @@ const iconMap = {
   Valores: ValoresIcon,
 }
 
+
 export default function QuienesSomos() {
+  const navigate = useNavigate();
+const handleBack = () => {
+  navigate('/');
+};
   return (
     <section className="w-full bg-gray-950/80 text-white py-24 px-6 lg:px-32 bg-marca-agua bg-fixed mt-8">
       {/* Hero */}
@@ -101,6 +107,17 @@ export default function QuienesSomos() {
           </div>
         ))}
       </div>
+
+{/* Botón visible solo en mobile */}
+        <div className="sm:hidden flex justify-start px-6 mt-20">
+          <button
+            onClick={handleBack}
+            className="bg-[#f4b702] text-black px-4 py-2 rounded hover:bg-yellow-400 transition"
+          >
+            ← Volver
+          </button>
+        </div>
+
     </section>
   )
 }

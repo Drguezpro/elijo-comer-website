@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import IconWhatsapp from '../assets/IconQuienesSomos/Whatsapp.png'
-import IconMail from '../assets/IconQuienesSomos/Mail.png'
-import IconUbicacion from '../assets/IconQuienesSomos/Ubicación.png'
+import { useNavigate } from 'react-router-dom';
+import IconWhatsapp from '../assets/IconQuienesSomos/Whatsapp.webp'
+import IconMail from '../assets/IconQuienesSomos/Mail.webp'
+import IconUbicacion from '../assets/IconQuienesSomos/Ubicación.webp'
 
 
 export default function Contacto() {
@@ -24,6 +25,12 @@ export default function Contacto() {
     alert('¡Mensaje enviado!')
     setForm({ nombre: '', email: '', mensaje: '', tipo: 'general' })
   }
+
+const navigate = useNavigate();
+const handleBack = () => {
+  navigate('/');
+};
+
 
   return (
     <section className="w-full bg-gray-950/80 bg-marca-agua bg-fixed text-white py-16 px-6 mt-16">
@@ -146,6 +153,17 @@ export default function Contacto() {
             Enviar mensaje
           </button>
         </form>
+
+        {/* Botón visible solo en mobile */}
+        <div className="sm:hidden flex justify-start px-6 mt-20">
+          <button
+            onClick={handleBack}
+            className="bg-[#f4b702] text-black px-4 py-2 rounded hover:bg-yellow-400 transition"
+          >
+            ← Volver
+          </button>
+        </div>
+
       </div>
     </section>
   )

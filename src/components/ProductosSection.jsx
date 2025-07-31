@@ -1,11 +1,13 @@
 // src/components/ProductosSection.jsx
 import React from 'react'
 import RubroCard from './RubroCard'
+import { useNavigate } from 'react-router-dom'
+
 
 // Importá tus imágenes destacadas por rubro
-import imgBurger from '../assets/productos/burgers/ClasicaDsk.png'
-import imgChiken from '../assets/productos/chiken/ChikenDsk.png'
-import imgWrap from '../assets/productos/wraps/WrappDsk2.png'
+import imgBurger from '../assets/productos/burgers/ClasicaDsk.webp'
+import imgChiken from '../assets/productos/chiken/ChikenDsk.webp'
+import imgWrap from '../assets/productos/wraps/WrappDsk2.webp'
 
 const rubros = [
   {
@@ -25,7 +27,15 @@ const rubros = [
   },
 ]
 
+
+
+
+
 export default function ProductosSection({ onVerMas }) {
+
+  const navigate = useNavigate()
+const handleBack = () => navigate('/')
+
   return (
     <section className="w-full bg-gray-950 bg-marca-agua bg-cover bg-center bg-fixed text-white py-16 px-6">
       
@@ -44,6 +54,18 @@ export default function ProductosSection({ onVerMas }) {
           <RubroCard key={rubro.nombre} rubro={rubro} onVerMas={() => onVerMas(rubro.nombre)}/>
         ))}
       </div>
+
+{/* Botón visible solo en mobile */}
+<div className="sm:hidden flex justify-start px-6 mt-10">
+  <button
+    onClick={handleBack}
+    className="bg-[#f4b702] text-black px-4 py-2 rounded hover:bg-yellow-400 transition"
+  >
+    ← Volver
+  </button>
+</div>
+
+
     </section>
   )
 }

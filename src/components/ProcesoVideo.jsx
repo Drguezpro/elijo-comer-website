@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import videoProceso from '../assets/videos/armadoBurger.mp4'
-import logo from '../assets/LogoElijoComerBis.png'
+import logo from '../assets/LogoElijoComerBis.webp'
 
 export default function ProcesoVideo() {
   const frases = [

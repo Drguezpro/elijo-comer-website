@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const slides = [
   {
@@ -23,10 +24,17 @@ const slides = [
   },
 ]
 
+
+
 export default function CinConC() {
   const [slideIndex, setSlideIndex] = useState(0)
   const [lineIndex, setLineIndex] = useState(0)
   const [fadeOut, setFadeOut] = useState(false)
+
+  const navigate = useNavigate();
+const handleBack = () => {
+  navigate('/');
+};
 
   useEffect(() => {
     // Fade out antes de cambiar la línea
@@ -72,6 +80,18 @@ export default function CinConC() {
           {slides[slideIndex].lines[lineIndex]}
         </p>
       </div>
+
+{/* Botón visible solo en mobile */}
+        <div className="sm:hidden flex justify-start px-6 mt-20">
+          <button
+            onClick={handleBack}
+            className="bg-[#f4b702] text-black px-4 py-2 rounded hover:bg-yellow-400 transition"
+          >
+            ← Volver
+          </button>
+        </div>
+
+
     </section>
   )
 }
